@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,3 +13,6 @@ Route::get('/hello', function () {
 });
 
 Route::resource('/post', PostController::class);
+
+Route::resource('services', ServiceController::class);
+Route::resource('bookings', BookingController::class);
